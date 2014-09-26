@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         //Restaurant.searchWithQuery("Thai",completion: (Restaurants: [Restaurant], error: NSError) -> Void in )
         YelpClient.sharedInstance.searchWithTerm("Thai", success: {
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.restaurants = restaurantDictionaries.map { (business : NSDictionary) -> Restaurant in
                 Restaurant(dictionary: business)
             }
-            println(self.restaurants.count)
+            //println(self.restaurants.count)
             self.tableView.reloadData()
             
             }) { (operation : AFHTTPRequestOperation! , error :NSError!) -> Void in
