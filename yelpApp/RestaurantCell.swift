@@ -22,7 +22,9 @@ class RestaurantCell: UITableViewCell {
             catLabel.text       = restaurant.categories
             addressLabel.text   = restaurant.address
             numReviewsLabel.text = String(restaurant.numReviews) + " reviews"
-            thumbView.setImageWithURL(NSURL(string:  restaurant.thumbUrl))
+            if let url = restaurant.thumbUrl {
+                    thumbView.setImageWithURL(NSURL(string:  restaurant.thumbUrl))
+            }
             starView.setImageWithURL(NSURL(string:  restaurant.ratingUrl))
         }
     }

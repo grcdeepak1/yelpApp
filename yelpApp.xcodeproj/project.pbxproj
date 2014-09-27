@@ -17,6 +17,10 @@
 		00FFDA6D19D3F44000E40F0C /* swiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA6C19D3F44000E40F0C /* swiftyJSON.swift */; };
 		00FFDA7019D3F72300E40F0C /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA6F19D3F72300E40F0C /* RestaurantCell.swift */; };
 		00FFDA7219D3F89300E40F0C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA7119D3F89300E40F0C /* Restaurant.swift */; };
+		00FFDA7419D526EB00E40F0C /* filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA7319D526EB00E40F0C /* filters.swift */; };
+		00FFDA7819D529F800E40F0C /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA7719D529F800E40F0C /* FiltersViewController.swift */; };
+		00FFDA7A19D535C500E40F0C /* FilterSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA7919D535C500E40F0C /* FilterSwitchTableViewCell.swift */; };
+		00FFDA7C19D535F000E40F0C /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFDA7B19D535F000E40F0C /* DropDownTableViewCell.swift */; };
 		F958CA51BE494DA8B1A50A14 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A27F20497E5142B3A50238B0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +50,10 @@
 		00FFDA6C19D3F44000E40F0C /* swiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swiftyJSON.swift; sourceTree = "<group>"; };
 		00FFDA6F19D3F72300E40F0C /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		00FFDA7119D3F89300E40F0C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		00FFDA7319D526EB00E40F0C /* filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filters.swift; sourceTree = "<group>"; };
+		00FFDA7719D529F800E40F0C /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		00FFDA7919D535C500E40F0C /* FilterSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		00FFDA7B19D535F000E40F0C /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
 		8139943B000943FF93040C68 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A27F20497E5142B3A50238B0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				00FFDA6F19D3F72300E40F0C /* RestaurantCell.swift */,
+				00FFDA7919D535C500E40F0C /* FilterSwitchTableViewCell.swift */,
+				00FFDA7B19D535F000E40F0C /* DropDownTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -143,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				00FFDA7119D3F89300E40F0C /* Restaurant.swift */,
+				00FFDA7319D526EB00E40F0C /* filters.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				00FFDA4519D3F27F00E40F0C /* ViewController.swift */,
+				00FFDA7719D529F800E40F0C /* FiltersViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -318,9 +330,13 @@
 				00FFDA7019D3F72300E40F0C /* RestaurantCell.swift in Sources */,
 				00FFDA4619D3F27F00E40F0C /* ViewController.swift in Sources */,
 				00FFDA7219D3F89300E40F0C /* Restaurant.swift in Sources */,
+				00FFDA7A19D535C500E40F0C /* FilterSwitchTableViewCell.swift in Sources */,
 				00FFDA4419D3F27F00E40F0C /* AppDelegate.swift in Sources */,
 				00FFDA6B19D3F40C00E40F0C /* yelpClient.swift in Sources */,
+				00FFDA7C19D535F000E40F0C /* DropDownTableViewCell.swift in Sources */,
 				00FFDA6D19D3F44000E40F0C /* swiftyJSON.swift in Sources */,
+				00FFDA7819D529F800E40F0C /* FiltersViewController.swift in Sources */,
+				00FFDA7419D526EB00E40F0C /* filters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

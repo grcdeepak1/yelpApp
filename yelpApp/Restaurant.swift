@@ -17,6 +17,7 @@ class Restaurant: NSObject {
     var address     : String!   = ""
     var addressItem : String!   = ""
     var categoryItem: String!   = ""
+    var BusinessViewController : ViewController!
     
     init(dictionary: NSDictionary) {
         var json        = JSON(object: dictionary)
@@ -53,25 +54,15 @@ class Restaurant: NSObject {
     class func searchWithQuery(query : String, completion : (Restaurants: [Restaurant]!, error: NSError!) -> Void) {
         YelpClient.sharedInstance.searchWithTerm(query, success: {
             (operation : AFHTTPRequestOperation! , response :AnyObject!) -> Void in
-            println(response)
+            //println(response)
             var restaurantDictionaries = (response as NSDictionary)["businesses"] as [NSDictionary]
             var restaurants = restaurantDictionaries.map { (business : NSDictionary) -> Restaurant in
                 Restaurant(dictionary: business)
             }
-            
+            completion(Restaurants: restaurants, error: nil)
             }) { (operation : AFHTTPRequestOperation! , error :NSError!) -> Void in
                 println(error)
             }
     }
 }
-/*
-func combine( array : NSArray , str : String) -> String {
-    var returnString: String! = ""
-    
-    for item in array {
-            returnString = returnString + str + (item as String)
-    }
-    return returnString
-}
-*/
 

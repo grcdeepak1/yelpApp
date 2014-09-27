@@ -14,6 +14,17 @@ let yelpConsumerSecret = "EWFunrsvK2cqiJZ08E__g6ajqBM"
 let yelpToken          = "3bRI-b5gaFIYnh05ZbnwdPFSkB4bq9pQ"
 let yelpTokenSecret    = "mGZE5f3kL-rWIucoYyZTcf2nWCw"
 
+func + <K,V> (left: Dictionary<K,V>, right: Dictionary<K,V>) -> Dictionary<K,V> {
+    var map = Dictionary<K,V>()
+    for (k, v) in left {
+        map[k] = v
+    }
+    for (k, v) in right {
+        map[k] = v
+    }
+    return map
+}
+
 class YelpClient: BDBOAuth1RequestOperationManager {
     var accessToken: String!
     var accessSecret: String!
@@ -49,5 +60,19 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         var parameters = ["term": term, "location": "San Francisco"]
         return self.GET("search", parameters: parameters, success: success, failure: failure)
     }
+    
+    func searchWithFilters(term: String, filter: NSDictionary, success: (AFHTTPRequestOperation!, AnyObject!) -> Void, failure: (AFHTTPRequestOperation!, NSError!) -> Void) -> AFHTTPRequestOperation! {
+        // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
+        var parameters = ["term": term, "location": "San Francisco"] as NSDictionary
+        var filterParams = parameters + filter
+        println(filterParams)
+        return self.GET("search", parameters: filterParams, success: success, failure: failure)
+    }
+    
+    func yelpQuery(term: String, filter: Dictionary <String, String> ) -> Void {
+        if filter.isEmpty {
+        }
+    }
+
     
 }
