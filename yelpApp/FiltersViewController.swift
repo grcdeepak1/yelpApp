@@ -68,7 +68,7 @@ class FiltersViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         self.filtersTableView.dataSource = self
         self.filtersTableView.delegate = self
-        //filtersTableView.rowHeight = UITableViewAutomaticDimension
+        filtersTableView.rowHeight = UITableViewAutomaticDimension
         isCategoriesVisible = false
         
         self.navigationItem.title = "Filters"
